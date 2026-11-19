@@ -1,0 +1,11 @@
+--- a/net/dsa/Kconfig
++++ b/net/dsa/Kconfig
+@@ -9,7 +9,7 @@
+ 	select NET_SWITCHDEV
+ 	select PHYLINK
+ 	select NET_DEVLINK
+-	imply NET_SELFTESTS
++	# imply NET_SELFTESTS
+ 	help
+ 	  Say Y if you want to enable support for the hardware switches supported
+ 	  by the Distributed Switch Architecture.

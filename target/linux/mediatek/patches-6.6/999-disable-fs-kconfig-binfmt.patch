@@ -1,0 +1,21 @@
+--- a/fs/Kconfig.binfmt
++++ b/fs/Kconfig.binfmt
+@@ -5,7 +5,7 @@
+ config BINFMT_ELF
+ 	bool "Kernel support for ELF binaries"
+ 	depends on MMU
+-	select ELFCORE
++	# select ELFCORE
+ 	default y
+ 	help
+ 	  ELF (Executable and Linkable Format) is a format for libraries and
+@@ -70,7 +70,8 @@
+ 	  It is also possible to run FDPIC ELF binaries on MMU linux also.
+ 
+ config ELFCORE
+-	bool
++	bool "Enable ELF core support"
++	default n
+ 	help
+ 	  This option enables kernel/elfcore.o.
+ 

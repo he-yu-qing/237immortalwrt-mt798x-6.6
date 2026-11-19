@@ -1,0 +1,12 @@
+--- a/mm/Kconfig.debug
++++ b/mm/Kconfig.debug
+@@ -54,8 +54,7 @@
+ 	  memory. This can make kmalloc/kfree-intensive workloads much slower.
+ 
+ config SLUB_DEBUG
+-	default y
+-	bool "Enable SLUB debugging support" if EXPERT
++	default n
+ 	depends on SLUB && SYSFS && !SLUB_TINY
+ 	select STACKDEPOT if STACKTRACE_SUPPORT
+ 	help
